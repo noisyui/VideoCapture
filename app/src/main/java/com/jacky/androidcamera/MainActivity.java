@@ -40,8 +40,8 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback, Ca
     private long timepre = 0;
     private long timeaft = 0;
 
-    private SurfaceView mSurfaceView = null;
-    private SurfaceHolder mSurfaceHolder = null;
+    private SurfaceView mSurfaceView;
+    private SurfaceHolder mSurfaceHolder;
     private Camera mCamera = null;
     private Button mBtnTransmit;
 
@@ -119,10 +119,10 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback, Ca
             public void onClick(View v) {
                 // TODO Auto-generated method stub
                 if (startSendVideo) {
-                    mBtnTransmit.setText("开始传输");
+                    mBtnTransmit.setText(R.string.start_transfer);
                     startSendVideo = false;
                 } else {
-                    mBtnTransmit.setText("停止传输");
+                    mBtnTransmit.setText(R.string.stop_transfer);
                     startSendVideo = true;
                 }
             }
