@@ -45,7 +45,7 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback, Ca
     private Button mBtnTransmit;
 
     private String username = "Jacky";
-    private String serverUrl = "192.168.0.5";
+    private String serverUrl = "192.168.1.106";
     private int serverPort = 8888;
 
     private int videoPreRate = 1;
@@ -98,8 +98,8 @@ public class MainActivity extends Activity implements SurfaceHolder.Callback, Ca
         mSurfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
 
         SharedPreferences preParas = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-        username = preParas.getString("Username", "Jccky");
-        serverUrl = preParas.getString("ServerUrl", "192.168.0.5");
+        username = preParas.getString("Username", "Jacky");
+        serverUrl = preParas.getString("ServerUrl", "192.168.1.106");
         String tempStr = preParas.getString("ServerPort", "8888");
         serverPort = Integer.parseInt(tempStr);
         tempStr = preParas.getString("VideoPreRate", "1");
